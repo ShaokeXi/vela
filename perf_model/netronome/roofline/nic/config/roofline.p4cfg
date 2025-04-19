@@ -1,0 +1,136 @@
+{
+    "tables": {
+        "forward": {
+            "rules": [
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.0"
+                            }
+                        }
+                    }, 
+                    "name": "to_v0", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111110"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.1"
+                            }
+                        }
+                    }, 
+                    "name": "to_v1", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111111"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.2"
+                            }
+                        }
+                    }, 
+                    "name": "to_v2", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111112"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.3"
+                            }
+                        }
+                    }, 
+                    "name": "to_v3", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111113"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.4"
+                            }
+                        }
+                    }, 
+                    "name": "to_v4", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111114"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.5"
+                            }
+                        }
+                    }, 
+                    "name": "to_v5", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111115"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.6"
+                            }
+                        }
+                    }, 
+                    "name": "to_v6", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111116"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.7"
+                            }
+                        }
+                    }, 
+                    "name": "to_v7", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111117"
+                        }
+                    }
+                }
+            ] 
+        }
+    }
+}

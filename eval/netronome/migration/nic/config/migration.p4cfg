@@ -1,0 +1,127 @@
+{
+    "tables": {
+        "forward": {
+            "rules": [
+                {
+                    "action": {
+                        "data": {
+                            "incoming_port": {
+                                "value": 0
+                            }
+                        },
+                        "type": "do_lookup"
+                    },
+                    "name": "lookup",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0800"
+                        },
+                        "ipv4.protocol": {
+                            "value": 6
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "incoming_port": {
+                                "value": 0
+                            }
+                        },
+                        "type": "do_netcache"
+                    },
+                    "name": "netcache",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0800"
+                        },
+                        "ipv4.protocol": {
+                            "value": 17
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "port": {
+                                "value": "p0"
+                            }
+                        },
+                        "type": "to_wire"
+                    },
+                    "name": "to_p0",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0810"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "port": {
+                                "value": "p1"
+                            }
+                        },
+                        "type": "to_wire"
+                    },
+                    "name": "to_p1",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0811"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "port": {
+                                "value": "p2"
+                            }
+                        },
+                        "type": "to_wire"
+                    },
+                    "name": "to_p2",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0812"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "port": {
+                                "value": "p3"
+                            }
+                        },
+                        "type": "to_wire"
+                    },
+                    "name": "to_p3",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0813"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_migrate"
+                    },
+                    "name": "migrate",
+                    "match": {
+                        "eth.etype": {
+                            "value": "0x0900"
+                        }
+                    }
+                }
+            ],
+            "default_rule": {
+                "action": {
+                    "type": "do_drop"
+                },
+                "name": "default"
+            }
+        }
+    }
+}

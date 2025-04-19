@@ -1,0 +1,344 @@
+{
+    "tables": {
+        "forward": {
+            "rules": [
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.0"
+                            }
+                        }
+                    }, 
+                    "name": "to_v0", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111110"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.1"
+                            }
+                        }
+                    }, 
+                    "name": "to_v1", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111111"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.2"
+                            }
+                        }
+                    }, 
+                    "name": "to_v2", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111112"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.3"
+                            }
+                        }
+                    }, 
+                    "name": "to_v3", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111113"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.4"
+                            }
+                        }
+                    }, 
+                    "name": "to_v4", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111114"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.5"
+                            }
+                        }
+                    }, 
+                    "name": "to_v5", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111115"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.6"
+                            }
+                        }
+                    }, 
+                    "name": "to_v6", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111116"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "v0.7"
+                            }
+                        }
+                    }, 
+                    "name": "to_v7", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x111111111117"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p0"
+                            }
+                        }
+                    }, 
+                    "name": "to_p0", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111110"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p1"
+                            }
+                        }
+                    }, 
+                    "name": "to_p1", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111111"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p2"
+                            }
+                        }
+                    }, 
+                    "name": "to_p2", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111112"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p3"
+                            }
+                        }
+                    }, 
+                    "name": "to_p3", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111113"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p0"
+                            }
+                        }
+                    }, 
+                    "name": "to_p0_wire", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111114"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p1"
+                            }
+                        }
+                    }, 
+                    "name": "to_p1_wire", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111115"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p2"
+                            }
+                        }
+                    }, 
+                    "name": "to_p2_wire", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111116"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "do_forward", 
+                        "data": {
+                            "port": {
+                                "value": "p3"
+                            }
+                        }
+                    }, 
+                    "name": "to_p3_wire", 
+                    "match": {
+                        "eth.dstAddr": {
+                            "value": "0x221111111117"
+                        }
+                    }
+                }
+            ] 
+        },
+        "nat": {
+            "rules": [
+                {
+                    "action": {
+                        "data": {
+                            "incoming_port": {
+                                "value": 0
+                            }
+                        },
+                        "type": "nat_ext_int"
+                    },
+                    "name": "from_p0",
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        },
+                        "ipv4.protocol": {
+                            "value": 6
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "incoming_port": {
+                                "value": 0
+                            }
+                        },
+                        "type": "nat_ext_int"
+                    },
+                    "name": "from_p1",
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p1"
+                        },
+                        "ipv4.protocol": {
+                            "value": 6
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "incoming_port": {
+                                "value": 0
+                            }
+                        },
+                        "type": "nat_ext_int"
+                    },
+                    "name": "from_p2",
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p2"
+                        },
+                        "ipv4.protocol": {
+                            "value": 6
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "data": {
+                            "incoming_port": {
+                                "value": 0
+                            }
+                        },
+                        "type": "nat_ext_int"
+                    },
+                    "name": "from_p3",
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p3"
+                        },
+                        "ipv4.protocol": {
+                            "value": 6
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
