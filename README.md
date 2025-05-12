@@ -13,12 +13,18 @@ This directory contains code related to the roofline performance model. It provi
 - Tools to build and analyze the roofline model on two types of smartNICs.
 - Scripts for collecting performance metrics and visualizing the results.
 
-### Additional Directories
-<!-- - `docs/`: Contains documentation and supplementary materials for understanding and using the repository.
-- `scripts/`: Includes utility scripts for automating tasks such as environment setup and data processing. -->
-- `configs/`: Stores configuration files required for various experiments and models.
+### `compile/`
+This directory hosts the Traffic-Aware Code Analysis Framework for SmartNICs. It includes:
+- Tools to analyze P4 programs, considering stateful operations and traffic patterns.
+- Logic to optimize resource allocation for efficient code generation on multi-threaded SmartNICs.
+
+<!-- ### Additional Directories
+- `docs/`: Contains documentation and supplementary materials for understanding and using the repository.
+- `scripts/`: Includes utility scripts for automating tasks such as environment setup and data processing.
+- `configs/`: Stores configuration files required for various experiments and models. -->
 
 ## Purpose
 The repository aims to provide tools and code for:
 1. Evaluating smartNIC performance through real-world applications and state migration tests.
 2. Modeling smartNIC capabilities using the roofline performance model to gain insights into their computational and memory bandwidth limits.
+3. Analyzing P4 programs to guide efficient code generation and resource allocation for SmartNICs.

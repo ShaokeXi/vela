@@ -1,0 +1,54 @@
+digraph StateBlocks {
+  compound=true; // Allow edges to clusters
+  rankdir=LR;
+  node [shape=box, style=filled, fillcolor=lightblue];
+  edge [arrowhead=vee];
+
+  subgraph cluster_0 {
+    label = "State Block 0";
+    style = filled;
+    fillcolor = lightgrey; // Color the subgraph background
+    node [fillcolor=lightblue]; // Node color inside cluster
+    "cluster_0_MinDip_0" [label="MinDip_0"];
+    "cluster_0_MinLoad_0" [label="MinLoad_0"];
+  }
+
+  subgraph cluster_1 {
+    label = "State Block 1";
+    style = filled;
+    fillcolor = lightgrey; // Color the subgraph background
+    node [fillcolor=lightblue]; // Node color inside cluster
+    "cluster_1_DipCntr_0" [label="DipCntr_0"];
+  }
+
+  cluster_1 -> cluster_0 [ltail="cluster_1", lhead="cluster_0"];
+
+  // Intra-Block Dependencies (Cycles)
+  "cluster_0_MinLoad_0" -> "cluster_0_MinDip_0" [dir=both, style=solid, color=blue];
+
+  // Flow Groups Subgraph 
+  subgraph cluster_flow_groups {
+    label="Flow Groups";
+    node [shape=ellipse, style=filled, fillcolor=lightgreen];
+    fg_0 [label="connTbl_0"];
+  }
+
+  // Flow Group Connections
+  fg_0 -> cluster_0 [style=dashed, arrowhead=none, lhead="cluster_0"];
+  fg_0 -> cluster_1 [style=dashed, arrowhead=none, lhead="cluster_1"];
+
+  subgraph cluster_legend {
+    label = "Legend";
+    rank = sink; // Try to place legend at the bottom
+    node [shape=plaintext, fontcolor=black];
+    key [label=<
+      <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td align="right">State Block (Cluster)</td><td bgcolor="lightgrey"></td></tr>
+        <tr><td align="right">Register</td><td><font color="black"><table border="0" cellborder="1" cellspacing="0" bgcolor="lightblue"><tr><td>RegName</td></tr></table></font></td></tr>
+        <tr><td align="right">Flow Group</td><td><font color="black"><table border="0" cellborder="1" cellspacing="0" shape="ellipse" bgcolor="lightgreen"><tr><td>FGName</td></tr></table></font></td></tr>
+        <tr><td align="right">Dependency</td><td><font color="black">&#8594;</font> (Solid Line)</td></tr>
+        <tr><td align="right">Flow Group Association</td><td><font color="black">--</font> (Dashed Line)</td></tr>
+      </table>
+    >];
+  }
+}
